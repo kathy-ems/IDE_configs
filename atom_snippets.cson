@@ -1,0 +1,70 @@
+# To access your snippets: Atom drop down -> Open Your snippets
+#
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it here:
+# https://github.com/bevry/cson#what-is-cson
+
+
+'.text.html':
+  '$tester':
+    'prefix': '$tester'
+    'body': """
+    <!DOCTYPE html>
+    <html>
+    <script src="${1:../Users/kathyems/${2:git/${3:jquery.js}}}"></script>
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+      </head>
+      <body>
+
+      </body>
+    </html>
+    """
+'.source.js':
+  '$forloop':
+    'prefix': '$forloop'
+    'body': 'for(var i = ${1:}; i < ${2:}; i++) {${3:}}'
+
+  '$forloop2':
+    'prefix': '$forloop2'
+    'body': 'for(var j = ${1:}; j < ${2:}; j++) {${3:}}'
+
+  '$toyproblem':
+    'prefix': '$toyproblem'
+    'body': """
+        // input: ${1:}
+        // output: ${2:}
+        /* Edge Cases & (space/time) constraints:
+          1. ${3:}
+          2. ${4:}
+        */
+        /* Articulate solution to problem in plain language
+          ${5:}
+        */
+        /* Pseudocode
+          // ${6:}
+        */
+        """
+
+  '$func':
+    'prefix': '$func'
+    'body': """
+    var ${1:} = function(${2:}) {
+        ${3:}
+      };
+    """
